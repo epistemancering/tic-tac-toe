@@ -1,11 +1,12 @@
-import logo from './logo.svg';
+import { useState } from 'react'
 import './App.css';
 import Square from "./Square"
 function App() {
-  let propVariable = "This is a prop"
+  let player = useState(true)
+  let [squares, setSquares] = useState(["", "", "", "", "", "", "", "", ""])
   return (
     <div className="App">
-      <Square propVar = {propVariable} />
+      <Square player = {player[0]} setPlayer = {player[1]} setSquares = {setSquares} squares = {squares} />
     </div>
   );
 }
